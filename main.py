@@ -1,16 +1,43 @@
-# This is a sample Python script.
+from flask import Flask, render_template, url_for, jsonify
+import sqlite3
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+app = Flask(__name__)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+lastAction = ""
 
 
-# Press the green button in the gutter to run the script.
+@app.route('/')
+def index():
+    return render_template("index.html")
+
+
+@app.route('/api', methods=['GET'])
+def api_all():
+    return jsonify(lastAction)
+
+
+@app.route('/left')
+def left():
+    global lastAction
+    lastAction = "moveLeft"
+    return render_template("index.html")
+
+
+@app.route('/right')
+def right():
+    global lastAction
+    lastAction = "moveRight"
+    return render_template("index.html")
+
+
+@app.route('/users')
+def user():
+    connect = sqlite3.connect('db_students.db')
+    cursor = connect.cursor()
+    cursor.execute(f'SELECT * FROM Students')
+    botinfo = cursor.fetchall()
+    print(botinfo)
+    return render_template("users.html", botinfo=botinfo)
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app.run(debug=True)
