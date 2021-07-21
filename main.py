@@ -1,27 +1,34 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, jsonify
 import sqlite3
 
 app = Flask(__name__)
+
+lastAction = ""
+
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
-@app.route('/Lesson')
-def Lesson():
-    return render_template("Lesson.html")
 
-@app.route('/Lesson_1')
-def Lesson_1():
-    return render_template("Lesson_1.html")
+@app.route('/api', methods=['GET'])
+def api_all():
+    return jsonify(lastAction)
 
-@app.route('/Lesson_2')
-def Lesson_2():
-    return render_template("Lesson_2.html")
 
-@app.route('/Lesson_3')
-def Lesson_3():
-    return render_template("Lesson_3.html")
+@app.route('/left')
+def left():
+    global lastAction
+    lastAction = "moveLeft"
+    return render_template("index.html")
+
+
+@app.route('/right')
+def right():
+    global lastAction
+    lastAction = "moveRight"
+    return render_template("index.html")
+
 
 @app.route('/users')
 def user():
