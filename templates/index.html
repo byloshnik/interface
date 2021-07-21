@@ -5,95 +5,21 @@
     <title>Title</title>
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-    <style type="text/css">
-    table.center {
-    margin-left: auto;
-    margin-right: auto;
-    }
-    .point {
-    border: 2px solid #4682B4;
-    width : 30%;
-    text-align :center;
-    color: #4682B4;
-    text-decoration:none;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    font-family: Arial;
-    border-radius: 20px;
-    }
-    .scale  {
-            width:100% ;
-            height: 25% ;
-            vspace: 30px ;
-            display: inline-block;
-            overflow: hidden;
-    }
-    .scale img {
-    transition: 0.5s;
-    display: block;
-    }
-    .scale img:hover {
-    transform: scale(1.2);
-    }
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 
-    body{
-    background: #d6eaf8;
-    }
-    .gradient-btn {
-    text-decoration:none;
-    display: inline-block;
-    color: white;
-    padding: 10px 30px;
-    margin: 10px 20px;
-    border-radius: 30px;
-    font-family: Arial;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #ADD8E6 0%, #4682B4 51%, #ADD8E6 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    transition: .5s;
-    }
-    .gradient-btn:hover {
-    background-position: right center;
-    }
-    </style>
 </head>
 <body>
-    <div style = "
-    font-size: 90px;
-    text-align: center;
-    color: #4682B4;
-    text-decoration:none;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    font-family: Arial;
-    border-radius: 20px;
-    margin-bottom: 50px;">
+    <h1>
         <b>IT-courses</b>
-    </div>
+    </h1>
         <table class="center">
             <tr style="width: 100%">
                 <td class="point">
-                    <b>
-Game development
-</b></td>
+                    <b>Game development</b></td>
                 <td class="point">
                     <b>Web-design</b></td>
                 <td class="point">
                     <b>Machine learning</b></td>
-            </tr>
-            <tr style="text-align :center;">
-            <td><div class ="scale">
-            <img src = "../static/images/1.svg" alt="" class ="scale" >
-            </div></td>
-            <td><div class ="scale">
-            <img src = "../static/images/2.svg" alt="" class ="scale" >
-            </div></td>
-            <td><div class ="scale">
-            <img src = "../static/images/3.svg" alt="" class ="scale" >
-            </div></td>
-            </tr>
             <tr style="
                 text-align :center;">
                 <td>
@@ -107,5 +33,13 @@ Game development
                 </td>
             </tr>
         </table>
+    <div id="table"></div>
+<script>
+    for i;i<20;i++
+    {
+        var element = document.getElementById("table");
+        element.innerHTML = ""
+    }
+</script>
 </body>
 </html>

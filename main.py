@@ -5,16 +5,13 @@ app = Flask(__name__)
 
 lastAction = ""
 
-
 @app.route('/')
 def index():
     return render_template("index.html")
 
-
 @app.route('/api', methods=['GET'])
 def api_all():
     return jsonify(lastAction)
-
 
 @app.route('/left')
 def left():
@@ -22,13 +19,11 @@ def left():
     lastAction = "moveLeft"
     return render_template("index.html")
 
-
 @app.route('/right')
 def right():
     global lastAction
     lastAction = "moveRight"
     return render_template("index.html")
-
 
 @app.route('/users')
 def user():
