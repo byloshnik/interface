@@ -3,12 +3,13 @@ import sqlite3
 
 app = Flask(__name__)
 
-lastAction = ""
+lastAction = {'id': 0,
+              'last_action': 'empty'}
 
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index_back.html")
 
 
 @app.route('/api', methods=['GET'])
@@ -16,28 +17,19 @@ def api_all():
     return jsonify(lastAction)
 
 
-@app.route('/left')
-def left():
-    global lastAction
-    lastAction = "moveLeft"
-    return render_template("index.html")
+@app.route('/move_left')
+def move_left():
+    lastAction['id'] += 1
+    lastAction['last_action'] = 'move_left'
+    return render_template("index_back.html")
 
 
-@app.route('/right')
-def right():
-    global lastAction
-    lastAction = "moveRight"
-    return render_template("index.html")
+@app.route('/move_right')
+def move_right():
+    lastAction['id'] += 1
+    lastAction['last_action'] = 'move_right'
+    return render_template("index_back.html")
 
-
-@app.route('/users')
-def user():
-    connect = sqlite3.connect('db_students.db')
-    cursor = connect.cursor()
-    cursor.execute(f'SELECT * FROM Students')
-    botinfo = cursor.fetchall()
-    print(botinfo)
-    return render_template("users.html", botinfo=botinfo)
 
 if __name__ == '__main__':
     app.run(debug=True)
