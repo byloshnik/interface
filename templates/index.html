@@ -5,105 +5,160 @@
     <title>Title</title>
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
-    <style type="text/css">
-    table.center {
-    margin-left: auto;
-    margin-right: auto;
-    }
-    .point {
-    border: 2px solid #4682B4;
-    width : 30%;
-    text-align :center;
-    color: #4682B4;
-    text-decoration:none;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    font-family: Arial;
-    border-radius: 20px;
-    }
-    .scale  {
-            width:100% ;
-            height: 25% ;
-            vspace: 30px ;
-            display: inline-block;
-            overflow: hidden;
-    }
-    .scale img {
-    transition: 0.5s;
-    display: block;
-    }
-    .scale img:hover {
-    transform: scale(1.2);
-    }
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 
-    body{
-    background: #d6eaf8;
-    }
-    .gradient-btn {
-    text-decoration:none;
-    display: inline-block;
-    color: white;
-    padding: 10px 30px;
-    margin: 10px 20px;
-    border-radius: 30px;
-    font-family: Arial;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    background-image: linear-gradient(to right, #ADD8E6 0%, #4682B4 51%, #ADD8E6 100%);
-    background-size: 200% auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    transition: .5s;
-    }
-    .gradient-btn:hover {
-    background-position: right center;
-    }
-    </style>
 </head>
 <body>
-    <div style = "
-    font-size: 90px;
-    text-align: center;
-    color: #4682B4;
-    text-decoration:none;
-    text-tranform: uppercase;
-    letter-spacing: 2px;
-    font-family: Arial;
-    border-radius: 20px;
-    margin-bottom: 50px;">
-        <b>IT-courses</b>
-    </div>
+    <h1>
+        <b>KEYBOARD</b>
+    </h1>
         <table class="center">
-            <tr style="width: 100%">
-                <td class="point">
-                    <b>
-Game development
-</b></td>
-                <td class="point">
-                    <b>Web-design</b></td>
-                <td class="point">
-                    <b>Machine learning</b></td>
+            <tr style="
+                text-align :center;">
+                <td rowspan="2" colspan="2">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-home-page-32.png" alt="" />X</a></div>
+                </td>
+                <td rowspan="2" colspan="3">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-collapse-arrow-64.png" alt=""/></a></div>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-home-page-32.png" alt=""  />Y</a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/right" ><img src="../static/images/icons8-collapse-arrow-32.png" alt=""/></a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/right" ><img src="../static/images/icons8-collapse-arrow-32.png" alt=""/></a></div>
+                </td>
             </tr>
-            <tr style="text-align :center;">
-            <td><div class ="scale">
-            <img src = "../static/images/1.svg" alt="" class ="scale" >
-            </div></td>
-            <td><div class ="scale">
-            <img src = "../static/images/2.svg" alt="" class ="scale" >
-            </div></td>
-            <td><div class ="scale">
-            <img src = "../static/images/3.svg" alt="" class ="scale" >
-            </div></td>
-            </tr>
+
+
+
+
+
             <tr style="
                 text-align :center;">
                 <td>
-                    <div><a class="gradient-btn" href="/left" >About<br>this Course</a></div>
+                    <div><a class="gradient-btn" href="/right" >1</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >-10</a></div>
+                </td>
+            </tr>
+
+
+
+<!--2            ///////-->
+            <tr style="
+                text-align :center;">
+                <td rowspan = "5">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-back-64.png" alt=""></a></div>
+                </td>
+                <td colspan="5">
+                    <div><a class="gradient-btn" href="/left" >10</a></div>
+                </td>
+                <td rowspan = "5">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-forward-64.png" alt=""/></a></div>
                 </td>
                 <td>
-                    <div><a class="gradient-btn" href="/right" >About<br>this Course</a></div>
+                    <div><a class="gradient-btn" href="/right" >0.1</a></div>
                 </td>
                 <td>
-                    <div><a class="gradient-btn" href="/Lesson_3" >About<br>this Course</a></div>
+                    <div><a class="gradient-btn" href="/right" >-3</a></div>
+                </td>
+            </tr>
+<!--3            ///////-->
+            <tr style="
+                text-align :center;">
+
+                <td colspan="5">
+                    <div><a class="gradient-btn" href="/left" >1</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >0.01</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >-1</a></div>
+                </td>
+            </tr>
+<!--4            ///////-->
+            <tr style="
+                text-align :center;">
+                <td>
+                    <div><a class="gradient-btn" href="/left" >-10</a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/left" >-1</a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/left" >XY</a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/left" >1</a></div>
+                </td>
+                <td>
+                    <div><a class="gradient-btn" href="/left" >10</a></div>
+                </td>
+                                            <td>
+                    <div><a class="gradient-btn" href="/right" >Z</a></div>
+                </td>
+                                            <td>
+                    <div><a class="gradient-btn" href="/right" >E0</a></div>
+                </td>
+            </tr>
+<!--5            ///////-->
+            <tr style="
+                text-align :center;">
+                <td colspan="5">
+                    <div><a class="gradient-btn" href="/left" >-1</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >-0.01</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >1</a></div>
+                </td>
+            </tr>
+<!--6            ///////-->
+            <tr style="
+                text-align :center;">
+                <td colspan="5">
+                    <div><a class="gradient-btn" href="/left" >10</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >-0.1</a></div>
+                </td>
+                                <td>
+                    <div><a class="gradient-btn" href="/right" >3</a></div>
+                </td>
+            </tr>
+<!--7            ///////-->
+            <tr style="
+                text-align :center;">
+                <td rowspan="2" colspan="2">
+                    <div><a class="gradient-btn" href="/left" ><img  src="../static/images/icons8-home-page-32.png" alt=""/>All</a></div>
+                </td>
+                <td rowspan="2" colspan="3">
+                    <div><a class="gradient-btn" href="/left" ><img src="../static/images/icons8-expand-arrow-64.png" alt=""/></a></div>
+                </td>
+                <td rowspan="2" colspan="2">
+                    <div><a class="gradient-btn" href="/left" ><img  src="../static/images/icons8-home-page-32.png" alt=""/>Z</a></div>
+                </td>
+            <td>
+                    <div><a class="gradient-btn" href="/right" >-1</a></div>
+                </td>
+            <td>
+                    <div><a class="gradient-btn" href="/right" >10</a></div>
+                </td>
+            </tr>
+            <tr style="
+                text-align :center;">
+
+            <td>
+                    <div><a class="gradient-btn" href="/right" ><img src="../static/images/icons8-expand-arrow-32.png" alt=""/></a></div>
+                </td>
+            <td>
+                    <div><a class="gradient-btn" href="/right" ><img src="../static/images/icons8-expand-arrow-32.png" alt=""/></a></div>
                 </td>
             </tr>
         </table>

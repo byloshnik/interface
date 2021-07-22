@@ -1,0 +1,38 @@
+    body {
+    background: #d6eaf8;
+    text-align: center;
+    color: #4682B4;
+    text-decoration:none;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    }
+    table.center {
+    margin-left: auto;
+    margin-right: auto;
+    }
+    h1 {
+    font-size: 90px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    }
+    .gradient-btn {
+    text-decoration:none;
+    display: inline-block;
+    color: white;
+    padding: 10px 30px;
+    margin: 2px 2px;
+    border-radius: 30px;
+    text-tranform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #ADD8E6 0%, #4682B4 51%, #ADD8E6 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: .5s;
+    }
+    .gradient-btn:hover {
+    background-position: right center;
+    }
