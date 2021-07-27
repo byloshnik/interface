@@ -20,11 +20,12 @@
             <td rowspan="2" colspan="2">
             </td>
             <td rowspan="2" colspan="3">
-                <div><a id="left_10" class="gradient-btn"><img src="../static/images/icons8-collapse-arrow-64.png"
-                            alt="" /></a></div>
+                <div><a class="gradient-btn"><img src="../static/images/icons8-collapse-arrow-64.png" alt="" /></a>
+                </div>
             </td>
             <td rowspan="2" colspan="2">
-                <div><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png" alt="" />Y</a></div>
+                <div onClick="home(1)"><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png"
+                            alt="" />Y</a></div>
             </td>
             <td>
                 <div><a class="gradient-btn"><img src="../static/images/icons8-collapse-arrow-32.png" alt="" /></a>
@@ -43,10 +44,10 @@
         <tr style="
                 text-align :center;">
             <td>
-                <div><a class="gradient-btn">1</a></div>
+                <div onClick="jog(2, 1)"><a class=" gradient-btn">1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-10</a></div>
+                <div onClick="jog(3, -10)"><a class=" gradient-btn">-10</a></div>
             </td>
         </tr>
 
@@ -59,16 +60,16 @@
                 <div><a class="gradient-btn"><img src="../static/images/icons8-back-64.png" alt=""></a></div>
             </td>
             <td colspan="5">
-                <div><a class="gradient-btn">10</a></div>
+                <div onClick="jog(1, 10)"><a class="gradient-btn">10</a></div>
             </td>
             <td rowspan="5">
                 <div><a class="gradient-btn"><img src="../static/images/icons8-forward-64.png" alt="" /></a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">0.1</a></div>
+                <div onClick="jog(2, 0.1)"><a class=" gradient-btn">0.1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-3</a></div>
+                <div onClick="jog(3, -3)"><a class=" gradient-btn">-3</a></div>
             </td>
         </tr>
         <!--3            ///////-->
@@ -76,32 +77,32 @@
                 text-align :center;">
 
             <td colspan="5">
-                <div><a class="gradient-btn">1</a></div>
+                <div onClick="jog(1, 1)"><a class="gradient-btn">1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">0.01</a></div>
+                <div onClick="jog(2, -0.01)"><a class="gradient-btn">0.01</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-1</a></div>
+                <div onClick="jog(3, -1)"><a class="gradient-btn">-1</a></div>
             </td>
         </tr>
         <!--4            ///////-->
         <tr style="
                 text-align :center;">
             <td>
-                <div id="move_left"><a class="gradient-btn">-10</a></div>
+                <div onClick="jog(0, -10)"><a class="gradient-btn">-10</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-1</a></div>
+                <div onClick="jog(0, -1)"><a class="gradient-btn">-1</a></div>
             </td>
             <td>
                 <div><a class="gradient-btn">XY</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">1</a></div>
+                <div onClick="jog(0, 1)"><a class="gradient-btn">1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">10</a></div>
+                <div onClick="jog(0, 10)"><a class="gradient-btn">10</a></div>
             </td>
             <td>
                 <div><a class="gradient-btn">Z</a></div>
@@ -114,45 +115,47 @@
         <tr style="
                 text-align :center;">
             <td colspan="5">
-                <div><a class="gradient-btn">-1</a></div>
+                <div onClick="jog(1, -1)"><a class="gradient-btn">-1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-0.01</a></div>
+                <div onClick="jog(2, -0.01)"><a class="gradient-btn">-0.01</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">1</a></div>
+                <div onClick="jog(3, 1)"><a class="gradient-btn">1</a></div>
             </td>
         </tr>
         <!--6            ///////-->
         <tr style="
                 text-align :center;">
             <td colspan="5">
-                <div><a class="gradient-btn">10</a></div>
+                <div onClick="jog(1, -10)"><a class="gradient-btn">-10</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-0.1</a></div>
+                <div onClick="jog(2, -0.1)"><a class="gradient-btn">-0.1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">3</a></div>
+                <div onClick="jog(3, 3)"><a class="gradient-btn">3</a></div>
             </td>
         </tr>
         <!--7            ///////-->
         <tr style="
                 text-align :center;">
             <td rowspan="2" colspan="2">
-                <div><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png" alt="" />All</a></div>
+                <div onClick="home('all')"><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png"
+                            alt="" />All</a></div>
             </td>
             <td rowspan="2" colspan="3">
                 <div><a class="gradient-btn"><img src="../static/images/icons8-expand-arrow-64.png" alt="" /></a></div>
             </td>
             <td rowspan="2" colspan="2">
-                <div><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png" alt="" />Z</a></div>
+                <div onClick="home(2)"><a class="gradient-btn"><img src="../static/images/icons8-home-page-32.png"
+                            alt="" />Z</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">-1</a></div>
+                <div onClick="jog(2, -1)"><a class="gradient-btn">-1</a></div>
             </td>
             <td>
-                <div><a class="gradient-btn">10</a></div>
+                <div onClick="jog(3, 10)"><a class="gradient-btn">10</a></div>
             </td>
         </tr>
         <tr style="
@@ -166,33 +169,8 @@
             </td>
         </tr>
     </table>
-    <script>
-        let interval;
-        function callback() {
-            fetch('/api', { method: 'GET' })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("dragon").innerHTML = data;
-                    console.log(data);
-                })
-                .catch((e) => { clearInterval(interval) })
 
-        }
-
-        function move_left() {
-            fetch('/move_left', { method: 'GET' })
-                .then(response => response.json())
-        }
-
-
-        document.getElementById("move_left").onclick = move_left
-        /* document.getElementsByClassName('test').array.forEach(element => {
-             element.style.cyrsor = "url('http://wiki-devel.sugarlabs.org/images/e/e2/Arrow.cur'), auto";
-         });*/
-
-
-        interval = setInterval(callback, 50)
-    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 
 </html>
